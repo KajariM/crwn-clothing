@@ -8,8 +8,8 @@ const CollectionPreview = ({ title, id, items }) => (
         <div className='preview'>
         {
             items.filter((item, idx) => { return idx < 4 })
-                .map(item =>
-                    <CollectionItem key={item.id} {...item}>{item.name.toUpperCase()}</CollectionItem>)
+                .map(item => 
+                    <CollectionItem key={item.id} item={item}>{item.name.toUpperCase()}</CollectionItem>)
     }
 </div>
     </div>
