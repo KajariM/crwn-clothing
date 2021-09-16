@@ -73,7 +73,7 @@ class App extends React.Component {
   }
 }
 const mapStateToProps = createStructuredSelector({
-  currentUser: currentUserSelector
+  currentUser: currentUserSelector,
 });
 //provide action creators to your component
 const mapDispatchToProps = (dispatch) => ({

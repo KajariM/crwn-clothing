@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./sign-up.styles.scss";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
-import { auth,createUserProfileDocument } from "../../firebase/firebase.utils";
+import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 
 class SignUpComponent extends Component {
   constructor() {
@@ -27,12 +27,12 @@ class SignUpComponent extends Component {
         email,
         password
       );
-      await createUserProfileDocument(user,{displayName});
+      await createUserProfileDocument(user, { displayName });
       this.setState({
-        displayName: '',
-        email: '',
-        password: '',
-        confirmPassword: ''
+        displayName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
       });
     } catch (error) {
       console.error(error);

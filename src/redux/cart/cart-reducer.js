@@ -1,5 +1,9 @@
 import { cartType } from "./cart-type";
-import { decreaseItemQuantity, filterRemoveItem, uniqueItems } from "../../services/utilities";
+import {
+  decreaseItemQuantity,
+  filterRemoveItem,
+  uniqueItems,
+} from "../../services/utilities";
 const INITIAL_STATE = {
   hidden: true,
   items: [],
@@ -21,12 +25,12 @@ const cartReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         items: filterRemoveItem(state.items, action.payload),
-      };  
+      };
     case cartType.REMOVE_CART_ITEMS:
       return {
         ...state,
         items: decreaseItemQuantity(state.items, action.payload),
-      }; 
+      };
     default:
       return state;
   }
