@@ -18,3 +18,8 @@ export const collectionSelector = memoize((collecionIdParam) => createSelector(
   [shopSelector],
   (collections) => collections.find((collection)=>collection.id === COLLECTION_ID_MAP[collecionIdParam])
 ));
+
+export const selectCollectionsForPreview = createSelector(
+  [shopSelector],
+  (collections) => Object.keys(collections).map(key=>collections[key])
+)
